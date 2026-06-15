@@ -1,5 +1,6 @@
 FROM scratch
 
-COPY ./k8s-preview-app-code ./app
+COPY app /app
+RUN CHMOD +x /app
 
-ENTRYPOINT ["app"]
+ENTRYPOINT ["/app"]
